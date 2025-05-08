@@ -1,0 +1,11 @@
+[workspace]
+members = ["core", "derive"]
+
+[package]
+name = "reflect-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+core = { path = "./core" }
+derive = { path = "./derive" }
