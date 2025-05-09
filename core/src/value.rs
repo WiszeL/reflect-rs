@@ -1,6 +1,6 @@
 #[derive(Debug, Clone)]
-pub enum ReflValue<'a> {
-    Str(&'a str),
+pub enum ReflValue {
+    Str(String),
     Int(i32),
     Float(f32),
     Bool(bool),

@@ -22,7 +22,7 @@ pub fn derive_reflection(input: TokenStream) -> TokenStream {
 
             // Pick the reflect_rs::ReflValue variant based on the field type:
             let variant = if is_string(ty) {
-                quote!(reflect_rs::ReflValue::Str(&self.#fname))
+                quote!(reflect_rs::ReflValue::Str(self.#fname.clone()))
             } else if is_integer(ty) {
                 quote!(reflect_rs::ReflValue::Int(self.#fname as i32))
             } else if is_float(ty) {
